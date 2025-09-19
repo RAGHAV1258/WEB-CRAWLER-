@@ -1,0 +1,19 @@
+name: Workflow 
+
+on: push 
+
+jobs: 
+    first_job :
+        runs-on: ubuntu-latest
+        steps:
+        - name : Checkout Repo
+          uses : actions/checkout@v5
+
+        - name: Wellcome Message
+          run: echo "This is My Intial Stage of Web Crawler."
+
+        - name: List files
+          run: ls -a
+
+        - name: Read file 
+          run: cat README.md
